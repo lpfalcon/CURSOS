@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: #ebebeb;
+}
+.nav-container {
+  display: flex;
+  justify-content: center;
+}
+.main-nav {
+  margin-top: 10px;
+  list-style: none;
+  padding-left: 0px;
+  width: 90%;
+}
+
+.main-nav__item {
+  display: inline-block;
+}
+
+.main-nav__item a {
+  padding: 5px;
+  text-decoration: none;
+}
+
+/* pseudo elementos */
+/* afeter = luego */
+.main-nav__item .main-nav__item--separator::before {
+  content: " |";
+  font-size: 35px;
+}
+
+.banner-component {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.banner-container {
+  background-color: rgb(232, 111, 67);
+  text-align: center;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.banner-container__text {
+  color: #fafafa;
+  padding: 5px;
+  text-align: start;
+}
+
+.banner-container__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.banner-container__description {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+}
+
+.info-component {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.info-container {
+  width: 85%;
+}
+
+.info-container-article {
+  background-color: #fafafafa;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.info-container-article_title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.info-container-article_list {
+  text-align: center;
+  list-style: none;
+}
+
+.info-container-article_list > li > svg {
+  color: #ebd412;
+  vertical-align: middle;
+}

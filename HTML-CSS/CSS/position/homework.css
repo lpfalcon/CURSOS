@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container__text {
+  background-color: rgb(193, 193, 193);
+  padding: 50px;
+  border: 2px black solid;
+}
+
+.container {
+  width: 500px;
+  margin: 30px;
+  position: relative;
+}
+
+.container__title {
+  background-color: rgb(190, 140, 200);
+  width: 250px;
+  height: 50px;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}

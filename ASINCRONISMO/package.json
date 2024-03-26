@@ -1,0 +1,21 @@
+{
+  "name": "asincronismo",
+  "version": "1.0.0",
+  "description": "Curso platzi asincronismo",
+  "main": "index.js",
+  "scripts": {
+    "callback": "node src/callback/challenge.js",
+    "promise": "node src/promise/challenge.js"
+  },
+  "keywords": [
+    "javascript",
+    "async"
+  ],
+  "author": "Laura Falcon <lpfalcon99@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^3.2.10",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "type": "module"
+}

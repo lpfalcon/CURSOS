@@ -1,0 +1,20 @@
+/** Comentarios */
+p {
+  color: blue;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* CLASS */
+
+.paragraph {
+    color: brown;
+
+}
+
+/* ID */
+
+#text{
+    color: yellow;
+    font-size: 20px;
+}

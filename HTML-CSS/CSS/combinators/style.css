@@ -1,0 +1,40 @@
+/* Adjacent  sibling*/
+.adjacent-sibling {
+  height: 400px;
+  width: 400px;
+  background: pink;
+}
+
+/* h2 + p {
+  color: red;
+} */
+
+/* General  sibling*/
+.general-sibling {
+  height: 400px;
+  width: 400px;
+  background: rgb(192, 239, 255);
+}
+
+.general-sibling h2 ~ p {
+  color: red;
+}
+
+
+/* Child*/
+
+.child {
+
+    height: 400px;
+    width: 400px;
+    background: rgb(156, 160, 162);
+}
+
+.child div > p {
+    color: red;
+}
+
+.child div p {
+color: rgb(204, 79, 171);
+
+}

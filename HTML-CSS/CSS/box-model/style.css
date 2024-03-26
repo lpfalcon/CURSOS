@@ -1,0 +1,17 @@
+body {
+  margin: 0px;
+}
+
+div {
+  display: block;
+  height: min-content;
+  width: min-content;
+  background: palevioletred;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  border: 15px solid purple;
+  margin: 20px auto;
+  font-size: 30px;  
+  box-sizing: border-box;
+}

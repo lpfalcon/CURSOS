@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 20px;
+}
+
+.text-container {
+  background-color: hsl(278, 70%, 76%);
+  width: 600px;
+  height: 500px;
+  font-size: 1.5em;
+}
+
+.text-container div {
+  font-size: 1.5em;
+}
+
+.text-rem {
+  font-size: 2rem;
+}

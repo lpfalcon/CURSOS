@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script defer src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script
+      defer
+      src="https://unpkg.com/htmx.org/dist/ext/client-side-templates.js"
+    ></script>
+    <script defer src="https://unpkg.com/mustache@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-size: 18px;
+      }
+      li {
+        margin-bottom: 4px;
+        max-width: 300px;
+        text-wrap: balance;
+      }
+
+      .loader {
+        width: 10px;
+        height: 10px;
+        border: 1px solid #000000;
+        border-bottom-color: #ff3d00;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+      }
+
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      button {
+        transition: opacity 0.3s;
+      }
+      button:disabled {
+        opacity: 0.3;
+        pointer-events: none;
+        cursor: not-allowed;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTMX</title>
+  </head>
+  <body hx-ext="client-side-templates">
+    <main>
+      <button
+        hx-get="https://hn.algolia.com/api/v1/search?tags=front_page&page=0&hitsPerPage=10"
+        hx-trigger="click"
+        hx-target="#results"
+        hx-swap="innerHTML"
+        hx-indicator=".loader"
+        hx-disabled-elt="this"
+        mustache-template="template-results"
+      >
+        Load results ...
+      </button>
+      <span class="htmx-indicator loader"></span>
+      <!-- 
+    <div id="results">
+        Results
+    </div>
+-->
+      <ul id="results"></ul>
+
+      <template id="template-results">
+        {{#hits}}
+        <li>
+          <a href="{{url}}"> {{title}}</a>
+        </li>
+        {{ /hits}}
+        <li
+          hx-get="https://hn.algolia.com/api/v1/search?tags=front_page&page=2&hitsPerPage=10"
+          hx-trigger="revealed"
+          hx-swap="outerHTML"
+          mustache-template="template-results"
+        ></li>
+      </template>
+    </main>
+  </body>
+</html>

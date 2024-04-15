@@ -1,0 +1,16 @@
+---
+import Example from "../../components/Example.astro";
+---
+
+<Example title="Example 1: Cat dates">
+  <div id="result"></div>
+
+  <button
+    class="border border-white px-4 py-2 rounded text-white"
+    hx-trigger="click"
+    hx-get="/partials/cat-fact"
+    hx-target="#result"
+  >
+    Curiosidad sobre gatos
+  </button>
+</Example>

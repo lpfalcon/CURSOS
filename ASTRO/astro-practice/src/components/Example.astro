@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title={Astro.props.title}>
+  <section class="my-24">
+    <div class="px-10">
+      <slot />
+    </div>
+  </section>
+</Layout>

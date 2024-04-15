@@ -1,0 +1,36 @@
+---
+import Example from "../../components/Example.astro";
+---
+<Example title="Example 2">
+
+<body
+hx-ext="client-side-templates"
+class="bg-slate-950 w-screen min-h-screen"
+>
+<main>
+  <form class="w-full  pt-5">
+      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0 mx-auto">
+        <label
+          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          for="input-movie"
+        >
+          Search your favorite movies
+        </label>
+        <input
+          placeholder="Advengers, marvel, ..."
+          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+          id="input-movie"
+          type="search"
+          name="name"
+          hx-get="/partials/movies"
+          hx-trigger="input changed delay:500ms"
+          mustache-template="template-results"
+          hx-target="#results"
+          hx-swap="innerHTML transition:true"
+        />
+      </div>
+  </form>
+  <ul id="results" class="grid grid-cols-2 gap-2 max-w-2xl mx-auto"></ul>
+</main>
+</body>
+</Example>

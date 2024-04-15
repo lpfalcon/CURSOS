@@ -1,0 +1,23 @@
+---
+const search = await Astro.url.searchParams.get('name')
+const res = await fetch(`https://rickandmortyapi.com/api/character/?name=${search}`);
+const { results } = await res.json();
+---
+
+{
+  results?.map((result) => {
+    return (
+      <li>
+        <article>
+          <img
+            src={result.image}
+            alt={result.name}
+            class="aspect-[11/16] w-full h-48
+              h-auto object-cover rounded-lg"
+          />
+          {result.name}
+        </article>
+      </li>
+    );
+  })
+}

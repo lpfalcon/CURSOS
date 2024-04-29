@@ -5,7 +5,7 @@ import FirstApp from "./FirstApp"
     return (
       <div>
             Hellow World App
-            <FirstApp/>
+            <FirstApp title="Laura Falcon Herrera" />
       </div>
     )
   }

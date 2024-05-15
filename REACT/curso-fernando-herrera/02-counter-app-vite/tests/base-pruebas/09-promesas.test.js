@@ -23,7 +23,7 @@ describe('Pruebas en 09-promesas', () => {
                 done()
             })
             .catch(error => {
-                console.log(error, 'error')
+                console.log( 'error, 9')
                 expect(error).toBe('No se pudo encontrar el héroe')
                 done()
             })

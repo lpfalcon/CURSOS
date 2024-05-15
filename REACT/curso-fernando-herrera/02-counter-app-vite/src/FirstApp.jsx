@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 const FirstApp = ({ title, subTitle, name }) => {
   return (
     <>
-      <h1>{title} </h1>
-      <h3> {subTitle}</h3>
-      <h3>{name}</h3>
+      <h1 data-testid="test-title">{ title }</h1>
+      <h3>{ subTitle }</h3>
+      <h3>{ name }</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aperiam,
         rerum impedit repellendus delectus minima, eveniet quisquam eligendi

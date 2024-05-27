@@ -2,21 +2,23 @@ package library;
 
 public class Book extends Publication {
 
-    private float price;
+    private String prize;
 
-      public Book(String ISBN, String name, int year, String author, float price) {
+    public Book(String ISBN,
+            String name,
+            int year,
+            String author,
+            String prize) {
         super(ISBN, name, year, author);
-        this.price = price;
-        //TODO Auto-generated constructor stub
+        this.prize = prize;
     }
 
-    public float getPrice() {
-        return price;
+    public String getPrice() {
+        return prize;
     }
 
-    public void setPrice(float price) {
-        this.price = price;
+    public void setPrice(String prize) {
+        this.prize = prize;
     }
-
 
 }
